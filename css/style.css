@@ -462,3 +462,72 @@ textarea:focus-visible {
   font-size: 0.95rem;
   margin-top: 1.5rem;
 }
+/* ----- Two-column split layout ----- */
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ----- Check list ----- */
+.check-list { list-style: none; margin: 0; padding: 0; }
+.check-list li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 2rem;
+  border-bottom: 1px solid #EEE6E2;
+}
+.check-list li::before {
+  content: "✿";
+  position: absolute;
+  left: 0;
+  color: var(--terracotta);
+}
+
+/* ----- Info card ----- */
+.info-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+.info-card-accent { background: var(--blush-light); }
+
+/* ----- Price table ----- */
+.price-table { width: 100%; border-collapse: collapse; }
+.price-table th,
+.price-table td {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #EEE6E2;
+  text-align: left;
+}
+.price-table th { font-weight: 400; }
+.price-table td {
+  text-align: right;
+  font-weight: 700;
+  color: var(--sage-dark);
+}
+
+/* ----- Gallery ----- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--blush);
+}
+
+/* ----- Screen-reader only text ----- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
