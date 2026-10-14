@@ -630,3 +630,93 @@ textarea:focus-visible {
 .checkbox-grid input { width: auto; accent-color: var(--sage); }
 
 .main-nav a.btn[aria-current="page"] { border-bottom: none; padding-bottom: 0.8rem; }
+/* =========================================
+   Responsive design
+   ========================================= */
+
+/* ----- Tablet and smaller (900px and below) ----- */
+@media (max-width: 900px) {
+
+  /* Hamburger button */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--sage-dark);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Dropdown mobile menu */
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+  .main-nav.is-open { display: block; }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 1.25rem 1.5rem;
+  }
+  .main-nav li a {
+    display: block;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #EEE6E2;
+  }
+  .main-nav a[aria-current="page"] {
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid #EEE6E2;
+    color: var(--terracotta);
+  }
+  .main-nav .btn,
+  .main-nav a.btn[aria-current="page"] {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    text-align: center;
+    border-bottom: none;
+    color: var(--white);
+  }
+
+  /* Contact page stacks into one column */
+  .contact-layout { grid-template-columns: 1fr; }
+}
+
+/* ----- Mobile (600px and below) ----- */
+@media (max-width: 600px) {
+  .section { padding: 3.5rem 0; }
+  .hero { padding: 4.5rem 0 4rem; }
+  .page-hero { padding: 3rem 0 2rem; }
+
+  .hero-buttons .btn { width: 100%; text-align: center; }
+
+  .split,
+  .service-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+  .occasion-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .occasion-card span { font-size: 1rem; padding: 1.5rem 0.75rem 0.75rem; }
+
+  .form-row,
+  .checkbox-grid { grid-template-columns: 1fr; gap: 0; }
+  .checkbox-grid label { margin-bottom: 0.5rem; }
+
+  .info-card { padding: 1.5rem; }
+  .faq-item { padding: 1.25rem; }
+}
