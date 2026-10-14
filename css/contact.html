@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Urban Bloom Florist or send an enquiry about flowers, weddings, events and corporate services in Auckland.">
+  <title>Contact &amp; Enquiries | Urban Bloom Florist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER & NAVIGATION ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Urban <span>Bloom</span></a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="flowers.html">Flowers</a></li>
+          <li><a href="weddings.html">Weddings &amp; Events</a></li>
+          <li><a href="corporate.html">Corporate</a></li>
+          <li><a href="delivery.html">Delivery &amp; FAQ</a></li>
+          <li><a href="contact.html" class="btn btn-accent" aria-current="page">Enquire Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== PAGE INTRO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Make an Enquiry</h1>
+        <p>Tell us what you're looking for and our florists will reply with availability, suggestions and pricing.</p>
+      </div>
+    </section>
+
+    <!-- ===== ENQUIRY FORM & CONTACT DETAILS ===== -->
+    <section class="section">
+      <div class="container contact-layout">
+
+        <form class="enquiry-form info-card" action="#" method="post">
+          <h2>Enquiry form</h2>
+          <p class="form-note">Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="enquiry-type">Enquiry type <span aria-hidden="true">*</span></label>
+              <select id="enquiry-type" name="enquiry-type" required>
+                <option value="">Please choose…</option>
+                <option value="personal">Personal flowers or gift</option>
+                <option value="wedding">Wedding or private event</option>
+                <option value="corporate">Corporate flowers</option>
+                <option value="other">Other question</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Date required</label>
+              <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+              <label for="suburb">Delivery suburb</label>
+              <input type="text" id="suburb" name="suburb" placeholder="e.g. Ponsonby">
+            </div>
+          </div>
+
+          <fieldset class="form-group">
+            <legend>Gift add-ons (optional)</legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="addons" value="vase"> Glass vase ($25)</label>
+              <label><input type="checkbox" name="addons" value="card"> Greeting card ($8)</label>
+              <label><input type="checkbox" name="addons" value="chocolates"> Chocolates ($18)</label>
+              <label><input type="checkbox" name="addons" value="wrapping"> Gift wrapping ($12)</label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="message">Your message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us the occasion, preferred flowers or colours, budget, and for events the number of guests." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-accent">Send Enquiry</button>
+        </form>
+
+        <aside class="contact-details">
+          <div class="info-card">
+            <h2>Contact details</h2>
+            <p><strong>Phone:</strong> <a href="tel:090000001">09 000 0001</a></p>
+            <p><strong>Email:</strong> <a href="mailto:hello@urbanbloom.kiwi">hello@urbanbloom.kiwi</a></p>
+            <p><strong>Location:</strong> Auckland, New Zealand</p>
+          </div>
+
+          <div class="info-card">
+            <h2>Opening hours</h2>
+            <table class="price-table">
+              <caption class="visually-hidden">Opening hours</caption>
+              <tbody>
+                <tr><th scope="row">Monday–Friday</th><td>8:30 am – 5:30 pm</td></tr>
+                <tr><th scope="row">Saturday</th><td>9:00 am – 3:00 pm</td></tr>
+                <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="info-card info-card-accent">
+            <h2>Good to know</h2>
+            <p>Please allow at least one working day's notice for deliveries. Wedding and event enquiries need at least three weeks.</p>
+            <a href="delivery.html" class="text-link">Delivery &amp; FAQ →</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="logo logo-footer">Urban <span>Bloom</span></p>
+        <p>Independent florist creating fresh arrangements for Auckland homes, events and businesses.</p>
+      </div>
+      <div>
+        <h2>Opening hours</h2>
+        <p>Mon–Fri: 8:30 am – 5:30 pm<br>Sat: 9:00 am – 3:00 pm<br>Sun: Closed</p>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <p><a href="tel:090000001">09 000 0001</a><br><a href="mailto:hello@urbanbloom.kiwi">hello@urbanbloom.kiwi</a></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="flowers.html">Flowers</a></li>
+          <li><a href="weddings.html">Weddings &amp; Events</a></li>
+          <li><a href="corporate.html">Corporate</a></li>
+          <li><a href="delivery.html">Delivery &amp; FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2026 Urban Bloom Florist · Student project for BBIS 6105</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
